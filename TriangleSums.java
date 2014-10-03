@@ -5,7 +5,7 @@ import java.util.HashMap;
 class TriangleSums {
 
 	private static int[][] cache;
-	private static int testCount = 0;
+	//private static int testCount = 0;
 	public static void main(String [] args) {
 		Scanner usrInput = new Scanner(System.in);
 		int numLines;
@@ -27,7 +27,7 @@ class TriangleSums {
 		for(int i = 0; i < solutions.length; i++) {
 			System.out.println(solutions[i]);
 		}
-		System.out.println(testCount);
+		//System.out.println(testCount);
 	}
 
 	public static int getGreatestSum(int[][] sumTriangle) {
@@ -41,7 +41,7 @@ class TriangleSums {
 			return 0;
 		}
 		else if(cache[row][col]!= -1){
-			testCount++;
+			//testCount++;
 			return cache[row][col];
 		}
 		else{
