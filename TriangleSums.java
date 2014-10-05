@@ -1,11 +1,8 @@
 import java.util.Scanner;
-import java.util.Map;
-import java.util.HashMap;
 
 class TriangleSums {
 
 	private static int[][] cache;
-	//private static int testCount = 0;
 	public static void main(String [] args) {
 		Scanner usrInput = new Scanner(System.in);
 		int numLines;
@@ -27,7 +24,6 @@ class TriangleSums {
 		for(int i = 0; i < solutions.length; i++) {
 			System.out.println(solutions[i]);
 		}
-		//System.out.println(testCount);
 	}
 
 	public static int getGreatestSum(int[][] sumTriangle) {
@@ -36,7 +32,6 @@ class TriangleSums {
 
 	public static int getGreatestSum(int[][] sumTriangle,int row, int col,int len){
 		int t1, t2, t;
-
 		if(row == len) {
 			return 0;
 		}
@@ -51,7 +46,7 @@ class TriangleSums {
 			cache[row][col] = t;
 			return t;
 		}
-	}
+	}//end getGreatestSum
 
 	private static int[][] initCache(int len) {
 		//The grid we need will always be a square
